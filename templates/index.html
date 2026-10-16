@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Main Homepage {% endblock %}
+
+{% block content %}
+
+    <li><a href="{{ "views.about" }}">About Our Shop</a></li>
+
+
+<h1>Welcome to my super cool website!</h1>
+<p>Did you know it's made in Flask?</p>
+<p>Did you know that this site was made by {{ name }}</p>
+
+<!-- You can use curly brackets to show variables from Flask/Python functions -->
+
+<h2>{{ username }} is currently logged in.</h2>
+
+
+<!-- Use curly brackets and percent signs to execute Python inline -->
+{% for i in range(5) %}
+    {% if i % 2 == 0 %}
+        <p>{{ i }}</p>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

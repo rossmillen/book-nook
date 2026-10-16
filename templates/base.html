@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Title {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul id="flash-messages">
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+{% block content %} <!-- Blocks has uniquely addressable names -->
+
+{% endblock %}
+</div>
+
+<script>
+setTimeout(function () {
+    const messages = document.getElementById('flash-messages');
+    if (messages) {
+        messages.remove();
+    }}, 5000);
+</script>
+
+
+</body>
+</html>

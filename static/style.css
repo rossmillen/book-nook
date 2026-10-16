@@ -1,0 +1,84 @@
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: red;
+    size: 32px;
+    font-family: "Book Antiqua";
+}
+h2 {
+    color: red;
+    font-family: "Book Antiqua";
+}
+
+p {
+    font-family: "Book Antiqua";
+}
+.container {
+    width: 70%;
+    margin-left: 15%;
+    background-color: bisque;
+    padding: 10px 10px 10px 10px;
+}
+
+.book {
+    width: 80%;
+    margin-left:10%;
+    margin-bottom: 50px;
+    background-color: burlywood;
+    display: flex;
+}
+.book h1{
+    color: green;
+}
+.book h2 {
+    color: aquamarine;
+}
+
+.bookinfo {
+    font-size: 24px;
+    background-color: azure;
+    width: 50%;
+    padding: 0px 20px 0px 20px;
+
+}
+
+.bookimg {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.bookimg img {
+    display: block;
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+
+}
+
+/* Flash message styling */
+
+#flash-messages {
+    list-style: none;
+    padding: 5px;
+    margin-left: 20px;
+    font-family: "Droid Sans Mono";
+}
+
+.flash {
+    padding: 12px;
+    border-radius: 6px;
+    max-width: 900px;
+    margin: 10px auto;
+}
+.flash.success {
+    background: green;
+    color: white;
+}
+
+.flash.error {
+    background: red;
+    color: white;
+}

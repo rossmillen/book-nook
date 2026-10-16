@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} Book List - Reading Nook {% endblock %}
+
+{% block content %}
+
+<h1>Welcome to the Reading Nook's Recommended List!</h1>
+<h2>This is the best list ever!</h2>
+
+    <div class="book">
+        <div class="bookinfo">
+            <h2>Book of the Week!</h2>
+            <h1>Neuromancer</h1>
+            <p>William Gibson.</p>
+            <p>This is a book about a cyberpunk future with crazy modifications to humans and stuff! It was written
+            quite a long time ago and served heavily as reference material for CDProjektRed's Cyberpunk 2077 -
+            including the name 'Night City'!</p>
+        </div>
+
+        <div class="bookimg">
+            <img src="{{ url_for('static', filename='images/cover_art/neuromancer.jpg') }}">
+        </div>
+    </div>
+
+        <div class="book">
+        <div class="bookinfo">
+            <h1>The Dark Forest</h1>
+            <p>Cixin Liu</p>
+            <p>Book two of three - epic hard sci-fi novel about aliens and space and stuff!</p>
+        </div>
+
+        <div class="bookimg">
+            <img src="{{ url_for('static', filename='images/cover_art/darkforest.jpg') }}">
+        </div>
+    </div>
+
+{%  endblock %}
